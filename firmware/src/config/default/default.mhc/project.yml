@@ -741,13 +741,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 96F123E2CAC96199B64E59CAF4AAF384
-- generatedChecksum: 6E170F957A43735D03E5E27419CF88C3
+- generatedChecksum: 213E216587A50F84073A36E5C761B7B0
   logicalPath: config\default\peripheral\sercom\usart
   name: plib_sercom2_usart.c
   physicalPath: peripheral\sercom\usart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 6E170F957A43735D03E5E27419CF88C3
+  userChecksum: 213E216587A50F84073A36E5C761B7B0
 - generatedChecksum: 657CDDE80BEBAD774BEAA083344C4312
   logicalPath: config\default\peripheral\sercom\usart
   name: plib_sercom3_usart.c
@@ -1321,7 +1321,7 @@ settings:
   delimiter: ''
   key: heap-size
   security: NON_SECURE
-  value: '512'
+  value: '4096'
 - append: false
   category: C32-LD
   delimiter: ''

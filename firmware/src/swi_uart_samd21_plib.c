@@ -79,6 +79,12 @@ void swi_uart_setbaud(ATCASWIMaster_t *instance, uint32_t baudrate)
     SERCOM2_USART_SerialSetup(&setup, 0);
 }
 
+/* SERCOM2 USART baud value for 230400 Hz baud rate */
+#define SERCOM2_USART_INT_BAUD_VALUE_230400            (60502U)
+
+/* SERCOM2 USART baud value for 175000 Hz baud rate */
+#define SERCOM2_USART_INT_BAUD_VALUE_175000            (61713U)
+
 /** \brief implementation of SWI UART change mode.
  * \param[in] instance  instance
  * \param[in] mode (TRANSMIT_MODE or RECEIVE_MODE)
@@ -92,10 +98,14 @@ void swi_uart_mode(ATCASWIMaster_t *instance, uint8_t mode)
 
     if (mode == TRANSMIT_MODE)
     {
+        /* Configure Baud Rate */
+        SERCOM2_REGS->USART_INT.SERCOM_BAUD = SERCOM_USART_INT_BAUD_BAUD(SERCOM2_USART_INT_BAUD_VALUE_230400);
         SERCOM2_REGS->USART_INT.SERCOM_CTRLB = (SERCOM2_REGS->USART_INT.SERCOM_CTRLB & ~(SERCOM_USART_INT_CTRLB_RXEN_Msk | SERCOM_USART_INT_CTRLB_TXEN_Msk)) | SERCOM_USART_INT_CTRLB_TXEN_Msk;
     }
     else if (mode == RECEIVE_MODE)
     {
+        /* Configure Baud Rate */
+        SERCOM2_REGS->USART_INT.SERCOM_BAUD = SERCOM_USART_INT_BAUD_BAUD(SERCOM2_USART_INT_BAUD_VALUE_175000);
         SERCOM2_REGS->USART_INT.SERCOM_CTRLB = (SERCOM2_REGS->USART_INT.SERCOM_CTRLB & ~(SERCOM_USART_INT_CTRLB_RXEN_Msk | SERCOM_USART_INT_CTRLB_TXEN_Msk)) | SERCOM_USART_INT_CTRLB_RXEN_Msk;
     }
 
