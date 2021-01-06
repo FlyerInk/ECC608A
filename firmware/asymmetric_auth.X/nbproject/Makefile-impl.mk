@@ -31,7 +31,7 @@ DEFAULTCONF=default
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=default FIRMWARE_VALIDATION 
+ALLCONFS=default 
 
 
 # build
@@ -46,14 +46,12 @@ ALLCONFS=default FIRMWARE_VALIDATION
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=FIRMWARE_VALIDATION clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=FIRMWARE_VALIDATION build
 
 
 

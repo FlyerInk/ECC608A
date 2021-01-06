@@ -14,16 +14,11 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>..</sourceRootElem>
-                <sourceRootElem>../../../../assets/dependencies/common</sourceRootElem>
-                <sourceRootElem>../../../00_resource_generation</sourceRootElem>
+                <sourceRootElem>../../python</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>
-                    <type>2</type>
-                </confElem>
-                <confElem>
-                    <name>FIRMWARE_VALIDATION</name>
                     <type>2</type>
                 </confElem>
             </confList>
