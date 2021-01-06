@@ -64,15 +64,6 @@
 // Section: Data types and constants
 // *****************************************************************************
 // *****************************************************************************
-
-/*** Macros for GPIO_PA02 pin ***/
-#define GPIO_PA02_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = 1 << 2)
-#define GPIO_PA02_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = 1 << 2)
-#define GPIO_PA02_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = 1 << 2)
-#define GPIO_PA02_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = 1 << 2)
-#define GPIO_PA02_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = 1 << 2)
-#define GPIO_PA02_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 2)) & 0x01)
-#define GPIO_PA02_PIN                  PORT_PIN_PA02
 // *****************************************************************************
 /* PORT Group
 

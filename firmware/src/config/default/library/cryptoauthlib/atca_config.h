@@ -10,6 +10,10 @@
 #define ATCA_HAL_I2C
 #endif
 
+#ifndef ATCA_HAL_SWI
+#define ATCA_HAL_SWI
+#endif
+
 /** Include Device Support Options */
 #define ATCA_ATECC608A_SUPPORT
 #define ATCA_ATECC608_SUPPORT
@@ -17,7 +21,7 @@
 
 /* Polling Configuration Options  */
 #ifndef ATCA_POLLING_INIT_TIME_MSEC
-#define ATCA_POLLING_INIT_TIME_MSEC       1
+#define ATCA_POLLING_INIT_TIME_MSEC       2
 #endif
 #ifndef ATCA_POLLING_FREQUENCY_TIME_MSEC
 #define ATCA_POLLING_FREQUENCY_TIME_MSEC  2
@@ -43,6 +47,9 @@
 #define ATCA_POST_DELAY_MSEC 25
 #endif
 
+#ifndef ATCA_PRINTF
+#define ATCA_PRINTF
+#endif
 
 /* Define generic interfaces to the processor libraries */
 
@@ -65,7 +72,7 @@ typedef struct atca_plib_api
     atca_i2c_plib_transfer_setup    transfer_setup;
 } atca_plib_i2c_api_t;
 
-extern atca_plib_i2c_api_t sercom2_plib_i2c_api;
+extern atca_plib_i2c_api_t sercom0_plib_i2c_api;
 
 /** Define certificate templates to be supported. */
 #define ATCA_TFLEX_SUPPORT

@@ -1,11 +1,11 @@
 files:
-- generatedChecksum: B10D98FA2B78AA62A9D5F0CCA3484C7B
+- generatedChecksum: 67BFB2A24FB6F3C1BC8FFC4743F297A1
   logicalPath: config\default\library\cryptoauthlib\hal
   name: ATECC608_0.c
   physicalPath: library\cryptoauthlib\hal
   security: NON_SECURE
   type: SOURCE
-  userChecksum: B10D98FA2B78AA62A9D5F0CCA3484C7B
+  userChecksum: 67BFB2A24FB6F3C1BC8FFC4743F297A1
 - generatedChecksum: 18D788BF73C98CA075E39E74E48BE078
   logicalPath: config\default\library\cryptoauthlib
   name: atca_basic.c
@@ -657,13 +657,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: B15D96EEA51D471E3CE9CC053E32813E
-- generatedChecksum: B9BCBBFFDE18AEF257CD713462C187E0
+- generatedChecksum: 3EE37A83AD2E244C5EB8A01DE77A0B8A
   logicalPath: config\default\library\cryptoauthlib\hal
   name: hal_harmony_init.c
   physicalPath: library\cryptoauthlib\hal
   security: NON_SECURE
   type: SOURCE
-  userChecksum: B9BCBBFFDE18AEF257CD713462C187E0
+  userChecksum: 3EE37A83AD2E244C5EB8A01DE77A0B8A
 - generatedChecksum: A0B02226E8192C9003F47508C980A3FB
   logicalPath: config\default\library\cryptoauthlib\hal
   name: hal_i2c_harmony.c
@@ -671,20 +671,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: A0B02226E8192C9003F47508C980A3FB
-- generatedChecksum: 60BBE7CBA4D02182B843D2F70BD9D5E9
+- generatedChecksum: E05E2F5F476D7238D6DBA785B18AA5BC
   logicalPath: config\default
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 60BBE7CBA4D02182B843D2F70BD9D5E9
-- generatedChecksum: C8F6D841E4B5A0B19EAEAFBD55C9622A
+  userChecksum: E05E2F5F476D7238D6DBA785B18AA5BC
+- generatedChecksum: 96F6FB331F6552305D2E852E6B8A1466
   logicalPath: config\default
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C8F6D841E4B5A0B19EAEAFBD55C9622A
+  userChecksum: 96F6FB331F6552305D2E852E6B8A1466
 - generatedChecksum: 328F1E09E0DD9BEE901C4562A3E5180A
   logicalPath: config\default
   name: libc_syscalls.c
@@ -699,13 +699,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 9EB9A1910A8F941B16D5D5D65BADA4D8
+- generatedChecksum: A526D832A16BB03499E5FEE2657403CA
   logicalPath: config\default\peripheral\clock
   name: plib_clock.c
   physicalPath: peripheral\clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 9EB9A1910A8F941B16D5D5D65BADA4D8
+  userChecksum: A526D832A16BB03499E5FEE2657403CA
 - generatedChecksum: C99E6D9B9BA371EA749B7DC16BC2C209
   logicalPath: config\default\peripheral\evsys
   name: plib_evsys.c
@@ -713,13 +713,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C99E6D9B9BA371EA749B7DC16BC2C209
-- generatedChecksum: 48DDFE398937E81107F7AB289DF16D89
+- generatedChecksum: C94BC41FB76E8DF6DE5E6C95492B84B1
   logicalPath: config\default\peripheral\nvic
   name: plib_nvic.c
   physicalPath: peripheral\nvic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 48DDFE398937E81107F7AB289DF16D89
+  userChecksum: C94BC41FB76E8DF6DE5E6C95492B84B1
 - generatedChecksum: 12BB5180FB5A5EF3F5A1310030E4E6C5
   logicalPath: config\default\peripheral\nvmctrl
   name: plib_nvmctrl.c
@@ -727,20 +727,27 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 12BB5180FB5A5EF3F5A1310030E4E6C5
-- generatedChecksum: 7528969287954C0C0934ACF9AA712048
+- generatedChecksum: C37C33B68EEFBE0568D70114EF574DB6
   logicalPath: config\default\peripheral\port
   name: plib_port.c
   physicalPath: peripheral\port
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7528969287954C0C0934ACF9AA712048
-- generatedChecksum: 69028D94855DFD7EE607F9DBABC50369
+  userChecksum: C37C33B68EEFBE0568D70114EF574DB6
+- generatedChecksum: 96F123E2CAC96199B64E59CAF4AAF384
   logicalPath: config\default\peripheral\sercom\i2c_master
-  name: plib_sercom2_i2c_master.c
+  name: plib_sercom0_i2c_master.c
   physicalPath: peripheral\sercom\i2c_master
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 69028D94855DFD7EE607F9DBABC50369
+  userChecksum: 96F123E2CAC96199B64E59CAF4AAF384
+- generatedChecksum: 6E170F957A43735D03E5E27419CF88C3
+  logicalPath: config\default\peripheral\sercom\usart
+  name: plib_sercom2_usart.c
+  physicalPath: peripheral\sercom\usart
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 6E170F957A43735D03E5E27419CF88C3
 - generatedChecksum: 657CDDE80BEBAD774BEAA083344C4312
   logicalPath: config\default\peripheral\sercom\usart
   name: plib_sercom3_usart.c
@@ -874,13 +881,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 590A4F4CE794B1EB4CDE657634C91913
-- generatedChecksum: 8838C0EF216C320F899CD2B420D515EC
+- generatedChecksum: 39A10144F44FD52E12D9A1D28E593145
   logicalPath: config\default\library\cryptoauthlib
   name: atca_config.h
   physicalPath: library\cryptoauthlib
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8838C0EF216C320F899CD2B420D515EC
+  userChecksum: 6F38BA27367F4A900FF5424620BDB64A
 - generatedChecksum: D03E3BB47A437765D48AB851735F684D
   logicalPath: packs\ATSAMD21J18A_DFP
   name: atsamd21j18a.h
@@ -965,13 +972,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 016B5B4A71E106E734B16CA1517FF382
-- generatedChecksum: 0A20A4342747B920AA99D6DD5AC03F81
+- generatedChecksum: BA8C33AC6101B5B9A23BD79BB1D70CAB
   logicalPath: config\default
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0A20A4342747B920AA99D6DD5AC03F81
+  userChecksum: BA8C33AC6101B5B9A23BD79BB1D70CAB
 - generatedChecksum: A62880149571045CACABCBB3AC375EAD
   logicalPath: config\default
   name: device.h
@@ -1091,20 +1098,27 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 71D16914F1E580B0AF77141622DCD865
-- generatedChecksum: 65B36D20C9031CD1D632CF504D8158E7
+- generatedChecksum: FFF278F0E863BC1DC7D1988D471C106F
   logicalPath: config\default\peripheral\port
   name: plib_port.h
   physicalPath: peripheral\port
   security: NON_SECURE
   type: HEADER
-  userChecksum: 65B36D20C9031CD1D632CF504D8158E7
-- generatedChecksum: 2CD5D4573C6B88EEAF464D1B1E369126
+  userChecksum: FFF278F0E863BC1DC7D1988D471C106F
+- generatedChecksum: EB78330B616D643ABD62AE15461D85FD
   logicalPath: config\default\peripheral\sercom\i2c_master
-  name: plib_sercom2_i2c_master.h
+  name: plib_sercom0_i2c_master.h
   physicalPath: peripheral\sercom\i2c_master
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2CD5D4573C6B88EEAF464D1B1E369126
+  userChecksum: EB78330B616D643ABD62AE15461D85FD
+- generatedChecksum: 3483A352FFE8C9101A808A2A4898DC04
+  logicalPath: config\default\peripheral\sercom\usart
+  name: plib_sercom2_usart.h
+  physicalPath: peripheral\sercom\usart
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 3483A352FFE8C9101A808A2A4898DC04
 - generatedChecksum: DCC0369AFDD597FB63203FB1B7488E8B
   logicalPath: config\default\peripheral\sercom\usart
   name: plib_sercom3_usart.h

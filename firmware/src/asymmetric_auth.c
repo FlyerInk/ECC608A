@@ -34,11 +34,21 @@
 #if defined(__XC32__)
 #include "atca_helpers.h"
 #else
-#include "basic/atca_helpers.h"
+#include "atca_helpers.h"
 #endif
+
 #include "common/common.h"
 #include "cust_def_1_signer.h"
 #include "cust_def_2_device.h"
+
+ATCAIfaceCfg atecc608a_swi_init_data = {
+    .iface_type            = ATCA_SWI_IFACE,
+    .devtype               = ATECC608,
+    .atcaswi.bus           = 0,
+    .wake_delay            = 1500,
+    .rx_retries            = 20,
+    .cfg_data              = NULL
+};
 
 
 /** \brief global storage for signer certificate */
@@ -262,7 +272,8 @@ int main (void)
 
     //Select Interface configuration and device
 #if defined(__XC32__)
-    cfg = &atecc608_0_init_data;
+    //cfg = &atecc608_0_init_data;
+    cfg = &atecc608a_swi_init_data;
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 #endif

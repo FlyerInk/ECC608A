@@ -1,20 +1,22 @@
 /*******************************************************************************
-  NVIC PLIB Implementation
+  Serial Communication Interface Inter-Integrated Circuit (SERCOM I2C) Library
+  Instance Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_nvic.c
+    plib_sercom0_i2c.h
 
   Summary:
-    NVIC PLIB Source File
+    SERCOM I2C PLIB Header file
 
   Description:
-    None
-
+    This file defines the interface to the SERCOM I2C peripheral library. This
+    library provides access to and control of the associated peripheral
+    instance.
 *******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,29 +39,62 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+// DOM-IGNORE-END
 
-#include "device.h"
-#include "plib_nvic.h"
-
+#ifndef PLIB_SERCOM0_I2C_H
+#define PLIB_SERCOM0_I2C_H
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: NVIC Implementation
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+/* This section lists the other files that are included in this file.
+*/
+
+#include "plib_sercom_i2c_master_common.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
 
-void NVIC_Initialize( void )
-{
+/*
+ * The following functions make up the methods (set of possible operations) of
+ * this interface.
+ */
 
-    /* Enable NVIC Controller */
-    __DMB();
-    __enable_irq();
+void SERCOM0_I2C_Initialize(void);
 
-    /* Enable the interrupt sources and configure the priorities as configured
-     * from within the "Interrupt Manager" of MHC. */
-    NVIC_SetPriority(SERCOM0_IRQn, 3);
-    NVIC_EnableIRQ(SERCOM0_IRQn);
+bool SERCOM0_I2C_Read(uint16_t address, uint8_t *pdata, uint32_t length);
+
+bool SERCOM0_I2C_Write(uint16_t address, uint8_t *pdata, uint32_t length);
+
+bool SERCOM0_I2C_WriteRead(uint16_t address, uint8_t *wdata, uint32_t wlength, uint8_t *rdata, uint32_t rlength);
+
+bool SERCOM0_I2C_IsBusy(void);
+
+SERCOM_I2C_ERROR SERCOM0_I2C_ErrorGet(void);
+
+void SERCOM0_I2C_CallbackRegister(SERCOM_I2C_CALLBACK callback, uintptr_t contextHandle);
+
+bool SERCOM0_I2C_TransferSetup(SERCOM_I2C_TRANSFER_SETUP* setup, uint32_t srcClkFreq );
 
 
 
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
 }
+#endif
+// DOM-IGNORE-END
+
+#endif /* PLIB_SERCOM0_I2C_H */

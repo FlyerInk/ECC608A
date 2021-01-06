@@ -1,13 +1,8 @@
 /**
  * \file
- * \brief ATCA Hardware abstraction layer for Microchip devices over Harmony PLIB.
+ * \brief ATCA Hardware abstraction layer for SWI over UART drivers.
  *
- * This code is structured in two parts.  Part 1 is the connection of the ATCA HAL API to the physical I2C
- * implementation. Part 2 is the Harmony I2C primitives to set up the interface.
- *
- * Prerequisite: add SERCOM I2C Master Polled support to application in Atmel Studio
- *
- * \copyright (c) 2015-2018 Microchip Technology Inc. and its subsidiaries.
+ * \copyright (c) 2015-2020 Microchip Technology Inc. and its subsidiaries.
  *
  * \page License
  *
@@ -30,15 +25,25 @@
  * THIS SOFTWARE.
  */
 
-#include "cryptoauthlib.h"
+#ifndef HAL_SWI_UART_H_
+#define HAL_SWI_UART_H_
 
-atca_plib_i2c_api_t sercom0_plib_i2c_api = {
-    .read = SERCOM0_I2C_Read,
-    .write = SERCOM0_I2C_Write,
-    .is_busy = SERCOM0_I2C_IsBusy,
-    .error_get = SERCOM0_I2C_ErrorGet,
-    .transfer_setup = SERCOM0_I2C_TransferSetup
-};
+#include "swi_uart_samd21_plib.h"
 
+/** \defgroup hal_ Hardware abstraction layer (hal_)
+ *
+ * \brief
+ * These methods define the hardware abstraction layer for communicating with a CryptoAuth device
+ * using SWI interface.
+ *
+   @{ */
+#define SWI_WAKE_TOKEN   ((uint8_t)0x00)    //!< flag preceding a command
+#define SWI_FLAG_CMD     ((uint8_t)0x77)    //!< flag preceding a command
+#define SWI_FLAG_TX      ((uint8_t)0x88)    //!< flag requesting a response
+#define SWI_FLAG_IDLE    ((uint8_t)0xBB)    //!< flag requesting to go into Idle mode
+#define SWI_FLAG_SLEEP   ((uint8_t)0xCC)    //!< flag requesting to go into Sleep mode
 
+ATCA_STATUS hal_swi_send_flag(ATCAIface iface, uint8_t flag);
 
+/** @} */
+#endif /* HAL_SWI_UART_H_ */

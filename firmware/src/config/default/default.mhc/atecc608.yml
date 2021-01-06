@@ -15,7 +15,7 @@ children:
         - type: Values
           children:
           - type: Dynamic
-            attributes: {id: atecc608_0, value: SERCOM2}
+            attributes: {id: atecc608_0, value: SERCOM0}
       - type: Hex
         attributes: {id: I2C_ADDR}
         children:
@@ -26,6 +26,12 @@ children:
       - type: KeyValueSet
         attributes: {id: INTERFACE}
         children:
+        - type: Attributes
+          children:
+          - type: Boolean
+            attributes: {id: readOnly}
+            children:
+            - {type: Value, value: 'true'}
         - type: Values
           children:
           - type: Dynamic
@@ -45,6 +51,6 @@ children:
         - type: TargetAttachments
           children:
           - type: TargetAttachment
-            attributes: {targetComponentID: sercom2, targetAttachmentID: SERCOM2_I2C}
+            attributes: {targetComponentID: sercom0, targetAttachmentID: SERCOM0_I2C}
 - type: ElementPosition
-  attributes: {x: '177', y: '84', id: atecc608}
+  attributes: {x: '171', y: '81', id: atecc608}

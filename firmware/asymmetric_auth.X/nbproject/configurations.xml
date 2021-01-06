@@ -45,11 +45,12 @@
             <logicalFolder name="f1" displayName="sercom" projectFiles="true">
               <logicalFolder name="f2" displayName="i2c_master" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h</itemPath>
-                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h</itemPath>
               </logicalFolder>
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom3_usart.h</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom2_usart.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -110,8 +111,8 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../../../00_resource_generation/cust_def_1_signer.h</itemPath>
-      <itemPath>../../../00_resource_generation/cust_def_2_device.h</itemPath>
+      <itemPath>../../python/cust_def_1_signer.h</itemPath>
+      <itemPath>../../python/cust_def_2_device.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -210,14 +211,14 @@
                 <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_hw_aes_ccm.c</itemPath>
               </logicalFolder>
               <logicalFolder name="f1" displayName="hal" projectFiles="true">
-                <itemPath>../src/config/default/library/cryptoauthlib/hal/ATECC608_0.c</itemPath>
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/atca_hal.c</itemPath>
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/atca_hal.h</itemPath>
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/atca_start_config.h</itemPath>
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/atca_start_iface.h</itemPath>
-                <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_i2c_harmony.c</itemPath>
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_harmony_init.c</itemPath>
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_cortex_m_delay.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/ATECC608_0.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_i2c_harmony.c</itemPath>
               </logicalFolder>
               <logicalFolder name="f6" displayName="host" projectFiles="true">
                 <itemPath>../src/config/default/library/cryptoauthlib/host/atca_host.c</itemPath>
@@ -280,10 +281,11 @@
             </logicalFolder>
             <logicalFolder name="f1" displayName="sercom" projectFiles="true">
               <logicalFolder name="f2" displayName="i2c_master" projectFiles="true">
-                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.c</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom0_i2c_master.c</itemPath>
               </logicalFolder>
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom3_usart.c</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom2_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -301,6 +303,8 @@
       <itemPath>../src/main.c</itemPath>
       <itemPath>../../python/cust_def_1_signer.c</itemPath>
       <itemPath>../../python/cust_def_2_device.c</itemPath>
+      <itemPath>../src/hal_swi_uart.c</itemPath>
+      <itemPath>../src/swi_uart_samd21_plib.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -317,6 +321,7 @@
         <itemPath>../src/config/default/default.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/nvmctrl.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/project.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/sercom0.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/sercom2.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/sercom3.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/settings.yml</itemPath>
@@ -338,7 +343,7 @@
         <targetDevice>ATSAMD21J18A</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
@@ -375,6 +380,20 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="../src/main.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <AtmelIceTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -473,7 +492,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="512"/>
+        <property key="heap-size" value="4096"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
