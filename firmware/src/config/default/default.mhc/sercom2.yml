@@ -182,14 +182,14 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '175000'}
+        attributes: {value: '115200'}
   - type: Integer
     attributes: {id: USART_BAUD_VALUE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sercom2, value: '61713'}
+        attributes: {id: sercom2, value: '63019'}
   - type: KeyValueSet
     attributes: {id: USART_CHARSIZE_BITS}
     children:
